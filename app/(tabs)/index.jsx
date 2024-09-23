@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext, useCallback } from "react";
+import React, { useState, useContext, useCallback } from "react";
 import { SafeAreaView, StyleSheet, Text, View } from "react-native";
 import { router } from "expo-router";
 import * as Haptics from "expo-haptics";
@@ -12,6 +12,9 @@ import FontSize from "../../constants/FontSize.js";
 import DatabaseContext from "../../modules/DatabaseContext.js";
 import { useFocusEffect } from "@react-navigation/native";
 import { formatDateToDisplay, pascalCase } from "../../modules/utils";
+import * as SplashScreen from 'expo-splash-screen';
+
+SplashScreen.preventAutoHideAsync();
 
 export default function App() {
   const { DB, DBisReady } = useContext(DatabaseContext);
@@ -81,6 +84,8 @@ export default function App() {
       FROM transactions JOIN customers ON transactions.customer_id = customers.id 
       GROUP BY customers.name ORDER BY frequency DESC
       `);
+
+      await SplashScreen.hideAsync();
       setRegular(regularCustomer);
       return regularCustomer;
     } catch (error) {
