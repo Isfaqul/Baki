@@ -1,8 +1,6 @@
 # BAKI
 
----
-
-### Video Demo:  <URL HERE>
+### Video Demo:  https://youtu.be/T75ZntdJIj4
 
 ---
 
@@ -101,7 +99,7 @@ It has the option to set up emulators for various device specifications so that 
 #### 6. NPM
 For Package Manager, I used NPM. It makes installing and integrating 3rd party libraries a lot easier.
 
-### 7. Figma
+#### 7. Figma
 I used figma to create a design and build a prototype of my app, for reference.
 
 ---
