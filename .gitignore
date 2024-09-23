@@ -22,4 +22,5 @@ expo-env.d.ts
 
 # Credentials
 credentials/
+credentials.json
 @isfaqul__baki.jks
